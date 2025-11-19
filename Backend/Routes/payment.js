@@ -1,7 +1,12 @@
 import express from "express";
 import Stripe from "stripe";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const stripe = new Stripe("sk_test_51RObq8HOZ3LgTDitU5bYEwpnbjHieRYxxrKie2tKcvi8zJmvbGbufxnDHUNELhJPKj4T7JXYmBrOr2T27ThAJcbo006or1eNzL"); // Replace with your actual Stripe secret key
+// const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+
+// const stripe = new Stripe(""); // Replace with your actual Stripe secret key
 const router = express.Router();
 
 router.post("/create-checkout-session", async (req, res) => {
