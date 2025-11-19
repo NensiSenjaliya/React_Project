@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const API_PAYMENT = "http://localhost:5000/api/payment";
 
-const stripePromise = loadStripe("pk_test_51RObq8HOZ3LgTDitCZUH7KluW72RwJV5VCl8if09lrrBrlRswfh6NZfaEs0E6DeTESMqpSw2Lb6mxmvlDmPk6mtg00HBpq0szk"); // Replace with your Stripe public key
+const stripePromise = loadStripe("...."); // Replace with your Stripe public key
 
 const Order = () => {
   const location = useLocation();
